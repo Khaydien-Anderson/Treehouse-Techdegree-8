@@ -2,6 +2,13 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
+  background: bisque;
+}
+html h2 {
+  color: black;
+}
+html p {
+  color: darkgray;
 }
 
 body {
@@ -25,6 +32,23 @@ body {
   background: rgba(100, 100, 100, 0.4);
 }
 
+.card {
+  margin: 10px;
+  display: flex;
+  border: 2px solid brown;
+  background: beige;
+}
+.card img {
+  padding: 20px;
+  border-radius: 50%;
+}
+
+.card:hover {
+  border-color: burlywood;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
 .text-container h2 {
   font-weight: bolder;
   font-size: 16px;
@@ -43,6 +67,25 @@ body {
   border: 1px solid #778;
   border-radius: 5px;
   padding: 30px 20px;
+}
+
+.modal-left {
+  background: wheat;
+  position: absolute;
+  left: 15px;
+  margin-top: 150px;
+}
+
+.modal-right {
+  background: wheat;
+  position: absolute;
+  right: 10px;
+  margin-top: 150px;
+}
+
+.modal-left:hover,
+.modal-right:hover {
+  cursor: pointer;
 }
 
 .modal-close {

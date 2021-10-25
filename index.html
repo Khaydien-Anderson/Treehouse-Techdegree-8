@@ -16,7 +16,7 @@
     <header>
 <h1>Awesome Startup Employee Directory</h1>
     </header>
-    <input class="searchbar" type="search">
+    <input id="searchbar" type="text" onkeyup="filterNames()">
 <main class="grid-container">
 <!-- CARD 1 -->
 <div class="card">
@@ -99,7 +99,7 @@
 </div>
 
 <!-- CARD 9 -->
-<div class="card">
+<div class="card" >
     <img class="avatar" src="#">
     <div class="text-container">
         <h2 class="name"></h2>
@@ -129,7 +129,7 @@
 </div>
 
 <!-- CARD 12 -->
-<div class="card">
+<div class="card" >
     <img class="avatar" src="#">
     <div class="text-container">
         <h2 class="name"></h2>
@@ -139,9 +139,11 @@
 </div>
 </main>
 <!--OVERLAY-->
-<div class="overlay-hidden">
+<div class="overlay hidden">
     <div class="modal">
         <button class="modal-close">X</button>
+        <button  class="modal-left">&#8592;</button>
+        <button  class="modal-right">&#8594;</button>
         <div class="modal-content">
             <img class="avatar" src="#"/>
             <div class="text container">
@@ -151,6 +153,7 @@
                 <hr />
                 <p></p>
                 <p class="address"></p>
+                <p></p>
             </div>
         </div>
     </div>
