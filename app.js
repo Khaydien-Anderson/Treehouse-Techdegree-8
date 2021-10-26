@@ -76,7 +76,6 @@ function displayModal(index) {
     
     
 
-
 }
 
 gridContainer.addEventListener('click', e => {
@@ -155,3 +154,5 @@ const person = eData[i].querySelector('h2').textContent.toLowerCase()
 
   }
   }
+
+
