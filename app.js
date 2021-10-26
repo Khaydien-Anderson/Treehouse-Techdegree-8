@@ -12,12 +12,13 @@ const right = document.querySelector('.modal-right')
 const card1 = document.getElementById('card1')
 
 
-
+//FETCH 12 RANDOM USERS THEN TO JSON THEN DISPLAY ALL EMPLOYEES
 fetch(urlAPI)
 .then(res => res.json())
 .then(res => res.results)
 .then(displayEmployees)
 .catch(err => console.log(err))
+
 
 function displayEmployees(employeeData) {
 employees = employeeData;
@@ -89,11 +90,12 @@ console.log(card)
 displayModal(index)
 
 function cardNext() {
+ 
     if (index == card.length - 1) {
       index = 0;
     } else {
       index++;
-       
+       console.log(index)
     }
     displayModal(index);
   }
@@ -103,19 +105,27 @@ function cardNext() {
       index = card.length - 1;
     } else {
       index--;
-      
+      console.log(index)
     }
     displayModal(index);
   }
 
 
   left.addEventListener('click', () => {
-    
-      cardBack()
+    if (index == 0) {
+      index = 11;
+      displayModal(index)
+      
+    }else {cardBack()}
   })
 
   right.addEventListener('click', () => {
-    cardNext()
+    if (index == 11) {
+      index = 0;
+      displayModal(index)
+    }
+    else {cardNext()}
+    
 })
 }
 

@@ -1,26 +1,30 @@
 html {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
   background: bisque;
 }
 html h2 {
   color: black;
+  font-size: 16px;
 }
 html p {
   color: darkgray;
+  font-size: 14px;
 }
 
 body {
   position: relative;
-  padding: 40px;
+  padding: 20px;
 }
 
 .grid-container {
-  padding-top: 20px;
+  padding-top: 10px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 10px;
 }
 
 .overlay {
@@ -33,7 +37,6 @@ body {
 }
 
 .card {
-  margin: 10px;
   display: flex;
   border: 2px solid brown;
   background: beige;
